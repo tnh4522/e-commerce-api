@@ -17,9 +17,8 @@ import java.util.List;
 public class CategoryController {
     @Autowired
     private CategoryService categoryService;
-    @GetMapping()
+    @GetMapping
     public ResponseEntity<List<CategoryEntity>> findAllCategories() {
         return ResponseEntity.ok(categoryService.getAllCategories());
     }
-
 }
