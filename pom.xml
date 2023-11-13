@@ -68,13 +68,6 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
-                    <executions>
-                        <execution>
-                            <id>copy-dependencies</id>
-                            <phase>package</phase>
-                            <goals><goal>copy-dependencies</goal></goals>
-                        </execution>
-                    </executions>
                 </configuration>
             </plugin>
             <plugin>
