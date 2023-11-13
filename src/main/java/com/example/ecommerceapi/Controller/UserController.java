@@ -57,6 +57,7 @@ public class UserController {
             userEntity.setName(user.getName());
             userEntity.setPhone(user.getPhone());
             userEntity.setEmail(user.getEmail());
+            userEntity.setCountry(user.getCountry());
             userEntity.setPassword(user.getPassword() == null ? userEntity.getPassword() : user.getPassword());
             userEntity.setAvatar(user.getAvatar() == null ? userEntity.getAvatar() : user.getAvatar());
             userService.updateUser(userEntity);
