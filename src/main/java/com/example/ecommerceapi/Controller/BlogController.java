@@ -39,7 +39,7 @@ public class BlogController {
         return ResponseEntity.ok(blogEntities);
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<BlogEntity> findBlogById(@PathVariable Long id) {
         Optional<BlogEntity> blogOptional = blogService.findBlogById(id);
         if(blogOptional.isPresent()) {
