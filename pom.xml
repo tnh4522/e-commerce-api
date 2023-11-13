@@ -60,6 +60,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.0.1</version>
                 <configuration>
                     <excludes>
                         <exclude>
@@ -67,9 +68,15 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
+                    <executions>
+                        <execution>
+                            <id>copy-dependencies</id>
+                            <phase>package</phase>
+                            <goals><goal>copy-dependencies</goal></goals>
+                        </execution>
+                    </executions>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>
