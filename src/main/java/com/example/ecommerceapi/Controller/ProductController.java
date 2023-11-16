@@ -55,9 +55,6 @@ public class ProductController {
     @PostMapping ("add")
     @Procedure(MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<ProductEntity> addProduct(@RequestBody ProductEntity product) {
-        System.out.println(product.getCompanyProfile());
-        System.out.println(product.getDetail());
-        System.out.println(product.getImage());
         return ResponseEntity.ok(productService.saveProduct(product));
     }
     @PostMapping("update/{id}")
